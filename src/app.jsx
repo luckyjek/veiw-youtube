@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './app.css';
-import VideoList from './components/video_list/video.list';
+import VideoList from './components/video_list/video_list';
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -17,7 +17,9 @@ function App() {
       .catch(error => console.log('error', error));
   },[]);
 
+  //위에 정의했던 state videos를 전달해준다.
   return <VideoList videos={videos}/>;
 }
 
 export default App;
+
