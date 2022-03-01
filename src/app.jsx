@@ -5,14 +5,13 @@ import VideoList from './components/video_list/video_list';
 
 function App({youtube}) {
   const [videos, setVideos] = useState([]);
-  const search = query=>{
-      youtube.search(query)//
-      .then(videos => setVideos(videos));
+
+  const search = query =>{
+      youtube.search(query).then(videos=>setVideos(videos));
   };
 
   useEffect(()=>{
-      youtube.mostPopular()//
-      .then(videos => setVideos(videos));
+      youtube.mostPopular().then(videos=>setVideos(videos));
   },[]);
 
   //위에 정의했던 state videos를 전달해준다.
