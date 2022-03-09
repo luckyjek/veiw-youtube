@@ -1,3 +1,7 @@
+/**
+ * YoutubeFetch 클래스는 fetch를 이용했었던 예전 버전이다. 
+ * 지금 이 프로젝트에서는 youtuve.js를 사용하고있다.
+ */
 class YoutubeFetch{
     constructor(key){
         this.key = key;

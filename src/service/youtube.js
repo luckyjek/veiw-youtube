@@ -2,9 +2,10 @@ import axios from 'axios';
 
 class Youtube{
     constructor(key){
+        //youtube와 통신하는 base youtuve client를 만듬.
         this.youtube = axios.create({
             baseURL:'https://youtube.googleapis.com/youtube/v3',
-            params:{key:key},
+            params:{key:key}, //key는 받아온 key를 할당한다.
         })
     }
 
